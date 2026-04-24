@@ -1,0 +1,51 @@
+/* Border Radius Semantics */
+@utility radius-lg {
+  @apply rounded-xl; /* 0.75rem / 12px */
+}
+
+@utility radius-ml {
+  @apply rounded-[10px]; /* 10px */
+}
+
+@utility radius-md {
+  @apply rounded-lg; /* 0.5rem / 8px */
+}
+
+@utility radius-sm {
+  @apply rounded; /* 0.25rem / 4px */
+}
+
+/* Stroke Weight Semantics */
+@utility stroke-light {
+  @apply border; /* 1px */
+}
+
+@utility stroke-normal {
+  @apply border-2; /* 2px */
+}
+
+@utility stroke-bold {
+  @apply border-4; /* 4px */
+}
+
+@utility stroke-black {
+  @apply border-8; /* 8px */
+}
+
+/* Stroke Style Semantics */
+@utility stroke-solid {
+  @apply border-solid;
+}
+
+@utility stroke-dashed {
+  @apply border-dashed;
+}
+
+@utility stroke-dotted {
+  @apply border-dotted;
+}
+
+/* Callout Utility */
+@utility callout {
+  @apply bg-neutral-100/30 border-l-4 border-neutral-500 p-4 radius-sm;
+}

@@ -1,0 +1,156 @@
+# BASSVerse PeakCore Design System
+
+> [!IMPORTANT]
+> **MANDATORY INSTRUCTION FOR ALL AI AGENTS:**
+> You MUST read and follow this document before building any custom components or modifying existing ones. 
+> ALWAYS reuse existing semantic utilities and tokens. 
+> ALWAYS update this file if you modify style tokens, semantics, or core reusable components.
+
+## Typography Semantics
+
+### Headings (Barlow Condensed)
+*   `.display`: Ultra-large heading (6xl/8xl). Features wide tracking for industrial clarity. Changes color to `primary-500` on hover.
+*   `.h1` to `.h6`: Standard heading hierarchy. Features a **primary-colored underline transition** that expands from the left on hover.
+
+### Body & Meta (Jost)
+*   `.body-lg`: Large body text (1.125rem/1.25rem).
+*   `.body`: Standard base text (1rem).
+*   `.body-sm`: Secondary/dense text (0.875rem).
+*   `.caption`: Micro-text (0.75rem), uppercase, wide tracking.
+
+### Monospace (JetBrains Mono)
+*   `.codes`: Inline code blocks with background and border.
+
+---
+
+## Color System
+
+### Semantic Scales (100-900)
+Every color family uses a 100-900 scale. The system is designed with **automatic dark mode reversal**: in dark mode, 100 becomes dark and 900 becomes light.
+
+*   **Primary (Lime)**: Used for action highlights and interactive states. Base: `primary-500`.
+*   **Secondary (Navy)**: Used for secondary actions and structural depth. Base: `secondary-900`.
+*   **Accent (Orange)**: Used for call-outs and variety. Base: `accent-500`.
+*   **Neutral (Slate)**: Used for backgrounds, borders, and general text.
+
+### Status Colors (Fixed)
+Unlike the semantic scales above, status colors do **not** flip in dark mode. They remain consistent to ensure clear communication of state.
+
+*   **Success (Green)**: Vibrant green for positive status. Base: `success-500`.
+*   **Warning (Amber)**: Warm orange-yellow for alerts. Base: `warning-500`.
+*   **Error (Red)**: Vibrant red for destructive/failure states. Base: `error-500`.
+
+### Global Variables
+*   `--background`: Maps to `neutral-100` (Light) / `neutral-900` (Dark).
+*   `--foreground`: Maps to `neutral-900` (Light) / `neutral-100` (Dark).
+
+---
+
+## Strokes & Radius
+
+### Border Radius
+*   `.radius-sm`: 4px (tight elements).
+*   `.radius-md`: 8px (standard components).
+*   `.radius-lg`: **12px** (primary containers/homepage standard).
+
+### Stroke Weights
+*   `.stroke-light`: 1px (subtle borders).
+*   `.stroke-normal`: 2px (standard borders).
+*   `.stroke-bold`: 4px (heavy containers).
+*   `.stroke-black`: 8px (extreme industrial depth).
+
+### Stroke Styles
+*   `.stroke-solid`: Standard solid line.
+*   `.stroke-dashed`: Dashed line for availability/placeholders.
+*   `.stroke-dotted`: Dotted line for auxiliary separators.
+
+---
+
+## Interactive Components
+
+### Button (`src/components/ui/button.tsx`)
+A clean, modular button system with five base variants and semantic color integration.
+
+#### Variants
+*   `solid`: High-contrast action with page background text on colored background.
+*   `outline`: (Default) Standard 2px stroke and text in the same semantic color.
+*   `light`: 1px stroke, 25% background transparency, 50% on hover.
+*   `underline`: Text-only with a bottom border that expands to a full border on hover.
+*   `ghost`: Transparent background with subtle hover activation.
+
+#### Colors
+*   `primary`: Lime (`primary-500`)
+*   `secondary`: Navy (`secondary-500`)
+*   `accent`: Orange (`accent-500`)
+*   `neutral`: Slate/Foreground (`foreground`)
+
+#### Sizes & Radius
+| Size | Padding | Text | Radius |
+| :--- | :--- | :--- | :--- |
+| `2xs` | `px-1 py-0.5` | `text-[0.6rem]` | `.radius-sm` (4px) |
+| `xs` | `px-1.5 py-0.5` | `text-[0.7rem]` | `.radius-sm` (4px) |
+| `sm` | `px-2 py-1` | `text-xs` | `.radius-sm` (4px) |
+| `md` | `px-3 py-1.5` | `text-sm` | `.radius-sm` (4px) |
+| `lg` | `px-4 py-2` | `text-base` | `.radius-md` (8px) |
+
+*Note: Icon-only buttons maintain the same radius scale for consistency.*
+
+---
+
+### ToggleFull (`src/components/ui/toggle-full.tsx`)
+A multi-option segmented control system for navigation and state toggling, mirroring the button system's aesthetics.
+
+#### Variants
+*   `solid`: Active option is a high-contrast pill.
+*   `outline`: Active option has a 2px stroke.
+*   `light`: (Default) Active option has a subtle background and light stroke.
+*   `underline`: Active option has a bottom border.
+*   `ghost`: Active option has a subtle background highlight.
+
+#### Sizes & Radius
+| Size | Padding | Text | Radius |
+| :--- | :--- | :--- | :--- |
+| `2xs` | `px-1 py-0.5` | `text-[0.6rem]` | `.radius-sm` (4px) |
+| `xs` | `px-1.5 py-0.5` | `text-[0.7rem]` | `.radius-sm` (4px) |
+| `sm` | `px-2 py-1` | `text-xs` | `.radius-sm` (4px) |
+| `md` | `px-3 py-1.5` | `text-sm` | `.radius-sm` (4px) |
+| `lg` | `px-4 py-2` | `text-base` | `.radius-md` (8px) |
+
+*Note: Hovering inactive options in ToggleFull transitions the text color to primary.*
+
+---
+
+### Toggle (`src/components/ui/toggle.tsx`)
+A single-state binary switch component for toggling individual features or states.
+
+#### Variants
+*   `solid`: Pressed state is high-contrast; base state is subtle background.
+*   `outline`: Pressed state has a 2px stroke; base state has a neutral border.
+*   `light`: (Default) Pressed state has a primary highlight; base state is subtle.
+*   `underline`: Pressed state has a bottom border; base state is text-only.
+*   `ghost`: Subtle background highlight on hover and pressed states.
+
+#### Sizes & Radius
+| Size | Padding | Text | Radius |
+| :--- | :--- | :--- | :--- |
+| `2xs` | `px-1 py-0.5` | `text-[0.6rem]` | `.radius-sm` (4px) |
+| `xs` | `px-1.5 py-0.5` | `text-[0.7rem]` | `.radius-sm` (4px) |
+| `sm` | `px-2 py-1` | `text-xs` | `.radius-sm` (4px) |
+| `md` | `px-3 py-1.5` | `text-sm` | `.radius-sm` (4px) |
+| `lg` | `px-4 py-2` | `text-base` | `.radius-md` (8px) |
+
+*Note: Toggle components support an `icon` prop for high-precision iconography.*
+
+---
+
+## Technical Integration
+
+### File Structure
+- `src/styles/globals.css`: Main entry point.
+- `src/styles/tokens/`: Raw variables (`colours.css`, `fonts.css`).
+- `src/styles/semantics/`: Utility classes (`typography.css`, `strokes.css`).
+
+### Implementation Rules
+1.  **Never hardcode hex values.** Use `--color-{token}` or Tailwind utility classes.
+2.  **Avoid `dark:` variants** for colors. The tokens handle theme switching automatically.
+3.  **Reuse semantics.** Use `.h1` instead of `text-4xl font-bold` to ensure hover effects and font-family consistency.

@@ -1,0 +1,5 @@
+@theme inline {
+  --font-display: var(--font-barlow-condensed);
+  --font-sans: var(--font-jost);
+  --font-mono: var(--font-jetbrains-mono);
+}
