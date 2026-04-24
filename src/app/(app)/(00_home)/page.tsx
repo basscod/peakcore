@@ -16,7 +16,7 @@ export default function Home() {
         </div>
 
         <div className="space-y-4">
-          <h1 className="display">BASSVerse PeakCore</h1>
+          <h1 className="display">basscore</h1>
           <p className="body-lg text-neutral-500 max-w-lg mx-auto">
             Industrial-minimalist productivity suite.
             The core design system is active.

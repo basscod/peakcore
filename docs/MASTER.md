@@ -1,15 +1,15 @@
-# BASSVerse PeakCore: AI Agent Master Guide
+# basscore: AI Agent Master Guide
 
 > [!IMPORTANT]
 > **READ THIS FIRST.** 
-> This is the centralized knowledge hub for BASSVerse PeakCore. All agents MUST refer to these documents before writing any code to ensure consistency and prevent redundant implementations.
+> This is the centralized knowledge hub for basscore. All agents MUST refer to these documents before writing any code to ensure consistency and prevent redundant implementations.
 
 ## Documentation Directory
 
 | Document | Purpose |
 | :--- | :--- |
-| [Project Outline](file:///d:/Projects/WebDesign/BASSVerse/peakcore/docs/project-outline.md) | High-level project state, features, and historical update log. |
-| [Design System](file:///d:/Projects/WebDesign/BASSVerse/peakcore/docs/design-system.md) | **Critical.** Rules for typography, colors, strokes, and radii. |
+| [Project Outline](file:///d:/Projects/WebDesign/BASSVerse/basscore/docs/project-outline.md) | High-level project state, features, and historical update log. |
+| [Design System](file:///d:/Projects/WebDesign/BASSVerse/basscore/docs/design-system.md) | **Critical.** Rules for typography, colors, strokes, and radii. |
 
 ## Workflow Instructions
 1.  **Check the Log**: Refer to the `project-outline.md` update log to understand the current progress.

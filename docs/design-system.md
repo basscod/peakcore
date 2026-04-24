@@ -1,4 +1,4 @@
-# BASSVerse PeakCore Design System
+# basscore Design System
 
 > [!IMPORTANT]
 > **MANDATORY INSTRUCTION FOR ALL AI AGENTS:**

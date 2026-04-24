@@ -28,7 +28,7 @@ export default function ComponentsShowcase() {
     <div className="space-y-24 pb-32">
       <div className="space-y-8">
         <div className="space-y-4">
-          <p className="caption text-primary-500">BASSVerse Library</p>
+          <p className="caption text-primary-500">basscore library</p>
         </div>
 
         {/* Floating Navigator */}

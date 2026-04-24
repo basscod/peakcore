@@ -10,7 +10,7 @@ export function Navbar() {
       <div className="flex items-center justify-between px-8 h-16">
         {/* Logo / Brand */}
         <Link href="/" className="h5 hover:text-primary-500 transition-colors">
-          BASSVerse PeakCore
+          basscore
         </Link>
 
         {/* Navigation Links */}

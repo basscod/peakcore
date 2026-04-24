@@ -22,7 +22,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "BASSVerse PeakCore",
+  title: "basscore",
   description: "High-precision industrial productivity suite and design system core.",
 };
 

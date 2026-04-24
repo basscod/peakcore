@@ -1,7 +1,7 @@
-# Project Outline: BASSVerse PeakCore
+# Project Outline: basscore
 
 ## Overview
-BASSVerse PeakCore is an industrial-minimalist web application built with Next.js, focused on high-precision data visualization and productivity tools. The design language is characterized by sharp lines, geometric typography, and a reactive semantic color system.
+basscore is an industrial-minimalist web application built with Next.js, focused on high-precision data visualization and productivity tools. The design language is characterized by sharp lines, geometric typography, and a reactive semantic color system.
 
 ## Core Features
 *   **Typography System**: Multi-layered semantic hierarchy using Barlow Condensed, Jost, and JetBrains Mono.
@@ -63,6 +63,7 @@ BASSVerse PeakCore is an industrial-minimalist web application built with Next.j
 | 2026-04-24 | 13:55 | Resolved serialization errors in `page.tsx` and suppressed React 19 hydration script tag warnings in `ThemeProvider`. |
 | 2026-04-24 | 18:30 | Modularized `table.tsx`, centralized UI types in `src/types/ui.ts`, and standardized component architecture for scalability. |
 | 2026-04-24 | 18:45 | Implemented global fixed navbar and established mandatory full-bleed layout architecture for all pages. |
+| 2026-04-24 | 20:40 | Renamed project to "basscore" exclusively; removed all BASSVerse and PeakCore branding. |
 ---
 
 > [!NOTE]

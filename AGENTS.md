@@ -5,4 +5,4 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- END:nextjs-agent-rules -->
 
 # CRITICAL INSTRUCTION
-Before performing any task, you MUST refer to the [Documentation Hub](file:///d:/Projects/WebDesign/BASSVerse/peakcore/docs/MASTER.md) for the current project state, design rules, and update logs.
+Before performing any task, you MUST refer to the [Documentation Hub](file:///d:/Projects/WebDesign/BASSVerse/basscore/docs/MASTER.md) for the current project state, design rules, and update logs.
