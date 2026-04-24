@@ -38,18 +38,18 @@ export const ToggleFull = React.forwardRef<HTMLDivElement, ToggleFullProps>(
   ) => {
     // Size mapping (matching Button component)
     const sizeStyles = {
-      "2xs": "px-1 py-0.5 text-[0.6rem] radius-sm min-h-[1.25rem]",
-      xs: "px-1.5 py-0.5 text-[0.7rem] radius-sm min-h-[1.5rem]",
-      sm: "px-2 py-1 text-xs radius-sm min-h-[1.75rem]",
-      md: "px-3 py-1.5 text-sm radius-sm min-h-[2.25rem]",
-      lg: "px-4 py-2 text-base radius-md min-h-[2.75rem]",
+      "2xs": "px-3 py-0.5 text-[0.6rem] radius-sm min-h-[1.25rem]",
+      xs: "px-3.5 py-0.5 text-[0.7rem] radius-sm min-h-[1.5rem]",
+      sm: "px-4 py-1 text-xs radius-sm min-h-[1.75rem]",
+      md: "px-4.5 py-1 text-xs radius-sm min-h-[2rem]",
+      lg: "px-5.5 py-2 text-sm radius-sm min-h-[2.5rem]",
     };
 
     const containerPadding = {
       "2xs": "p-0.5",
       xs: "p-0.5",
       sm: "p-0.5",
-      md: "p-1",
+      md: "p-0.5",
       lg: "p-1",
     }[size];
 
@@ -105,6 +105,14 @@ export const ToggleFull = React.forwardRef<HTMLDivElement, ToggleFullProps>(
           const isActive = option.value === value;
           const Icon = option.icon;
 
+          const iconSizes = {
+            "2xs": "w-2.5 h-2.5 shrink-0",
+            xs: "w-3 h-3 shrink-0",
+            sm: "w-3.5 h-3.5 shrink-0",
+            md: "w-4 h-4 shrink-0",
+            lg: "w-5 h-5 shrink-0",
+          };
+
           return (
             <button
               key={option.value}
@@ -119,7 +127,7 @@ export const ToggleFull = React.forwardRef<HTMLDivElement, ToggleFullProps>(
                 }
               `}
             >
-              {Icon && <Icon className={size === "2xs" || size === "xs" ? "w-3 h-3" : "w-4 h-4"} />}
+              {Icon && <Icon className={iconSizes[size]} />}
               <span>{option.label}</span>
             </button>
           );

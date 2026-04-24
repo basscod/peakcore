@@ -87,11 +87,11 @@ A clean, modular button system with five base variants and semantic color integr
 #### Sizes & Radius
 | Size | Padding | Text | Radius |
 | :--- | :--- | :--- | :--- |
-| `2xs` | `px-1 py-0.5` | `text-[0.6rem]` | `.radius-sm` (4px) |
-| `xs` | `px-1.5 py-0.5` | `text-[0.7rem]` | `.radius-sm` (4px) |
-| `sm` | `px-2 py-1` | `text-xs` | `.radius-sm` (4px) |
-| `md` | `px-3 py-1.5` | `text-sm` | `.radius-sm` (4px) |
-| `lg` | `px-4 py-2` | `text-base` | `.radius-md` (8px) |
+| `2xs` | `px-3 py-0.5` | `text-[0.6rem]` | `.radius-sm` (4px) |
+| `xs` | `px-3.5 py-0.5` | `text-[0.7rem]` | `.radius-sm` (4px) |
+| `sm` | `px-4 py-1` | `text-xs` | `.radius-sm` (4px) |
+| `md` | `px-4.5 py-1` | `text-xs` | `.radius-sm` (4px) **[DEFAULT]** |
+| `lg` | `px-5.5 py-2` | `text-sm` | `.radius-sm` (4px) |
 
 *Note: Icon-only buttons maintain the same radius scale for consistency.*
 
@@ -110,11 +110,11 @@ A multi-option segmented control system for navigation and state toggling, mirro
 #### Sizes & Radius
 | Size | Padding | Text | Radius |
 | :--- | :--- | :--- | :--- |
-| `2xs` | `px-1 py-0.5` | `text-[0.6rem]` | `.radius-sm` (4px) |
-| `xs` | `px-1.5 py-0.5` | `text-[0.7rem]` | `.radius-sm` (4px) |
-| `sm` | `px-2 py-1` | `text-xs` | `.radius-sm` (4px) |
-| `md` | `px-3 py-1.5` | `text-sm` | `.radius-sm` (4px) |
-| `lg` | `px-4 py-2` | `text-base` | `.radius-md` (8px) |
+| `2xs` | `px-3 py-0.5` | `text-[0.6rem]` | `.radius-sm` (4px) |
+| `xs` | `px-3.5 py-0.5` | `text-[0.7rem]` | `.radius-sm` (4px) |
+| `sm` | `px-4 py-1` | `text-xs` | `.radius-sm` (4px) |
+| `md` | `px-4.5 py-1` | `text-xs` | `.radius-sm` (4px) **[DEFAULT]** |
+| `lg` | `px-5.5 py-2` | `text-sm` | `.radius-sm` (4px) |
 
 *Note: Hovering inactive options in ToggleFull transitions the text color to primary.*
 
@@ -133,17 +133,31 @@ A single-state binary switch component for toggling individual features or state
 #### Sizes & Radius
 | Size | Padding | Text | Radius |
 | :--- | :--- | :--- | :--- |
-| `2xs` | `px-1 py-0.5` | `text-[0.6rem]` | `.radius-sm` (4px) |
-| `xs` | `px-1.5 py-0.5` | `text-[0.7rem]` | `.radius-sm` (4px) |
-| `sm` | `px-2 py-1` | `text-xs` | `.radius-sm` (4px) |
-| `md` | `px-3 py-1.5` | `text-sm` | `.radius-sm` (4px) |
-| `lg` | `px-4 py-2` | `text-base` | `.radius-md` (8px) |
+| `2xs` | `px-3 py-0.5` | `text-[0.6rem]` | `.radius-sm` (4px) |
+| `xs` | `px-3.5 py-0.5` | `text-[0.7rem]` | `.radius-sm` (4px) |
+| `sm` | `px-4 py-1` | `text-xs` | `.radius-sm` (4px) |
+| `md` | `px-4.5 py-1` | `text-xs` | `.radius-sm` (4px) **[DEFAULT]** |
+| `lg` | `px-5.5 py-2` | `text-sm` | `.radius-sm` (4px) |
 
 *Note: Toggle components support an `icon` prop for high-precision iconography.*
 
 ---
 
 ## Technical Integration
+
+---
+
+### InputField (`src/components/ui/input-field.tsx`)
+A robust data entry system with integrated labels, status feedback, and adaptive sizing.
+
+#### Sizes & Radius
+| Size | Padding | Text | Radius |
+| :--- | :--- | :--- | :--- |
+| `sm` | `px-4 py-1` | `text-xs` | `.radius-sm` (4px) |
+| `md` | `px-4.5 py-1.5` | `text-sm` | `.radius-sm` (4px) **[DEFAULT]** |
+| `lg` | `px-5.5 py-2` | `text-base` | `.radius-sm` (4px) |
+
+*Note: InputField icons scale with the size and maintain consistent alignment with the wide horizontal padding.*
 
 ### File Structure
 - `src/styles/globals.css`: Main entry point.

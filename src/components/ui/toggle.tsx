@@ -33,11 +33,11 @@ export const Toggle = React.forwardRef<HTMLButtonElement, ToggleProps>(
   ) => {
     // Size mapping
     const sizeStyles = {
-      "2xs": "px-1 py-0.5 text-[0.6rem] radius-sm min-h-[1.25rem]",
-      xs: "px-1.5 py-0.5 text-[0.7rem] radius-sm min-h-[1.5rem]",
-      sm: "px-2 py-1 text-xs radius-sm min-h-[1.75rem]",
-      md: "px-3 py-1.5 text-sm radius-sm min-h-[2.25rem]",
-      lg: "px-4 py-2 text-base radius-md min-h-[2.75rem]",
+      "2xs": "px-3 py-0.5 text-[0.6rem] radius-sm min-h-[1.25rem]",
+      xs: "px-3.5 py-0.5 text-[0.7rem] radius-sm min-h-[1.5rem]",
+      sm: "px-4 py-1 text-xs radius-sm min-h-[1.75rem]",
+      md: "px-4.5 py-1 text-xs radius-sm min-h-[2rem]",
+      lg: "px-5.5 py-2 text-sm radius-sm min-h-[2.5rem]",
     };
 
     // Color mapping (matching Button)
@@ -70,11 +70,11 @@ export const Toggle = React.forwardRef<HTMLButtonElement, ToggleProps>(
     const isIconOnly = !children;
     const iconOnlyStyles = isIconOnly
       ? {
-          "2xs": "p-0.5 w-5 h-5",
-          xs: "p-0.5 w-6 h-6",
-          sm: "p-1 w-7 h-7",
-          md: "p-1.5 w-9 h-9",
-          lg: "p-2 w-11 h-11",
+          "2xs": "p-0.5 w-4 h-4",
+          xs: "p-0.5 w-5 h-5",
+          sm: "p-0.5 w-6 h-6",
+          md: "p-1 w-7 h-7",
+          lg: "p-1.5 w-9 h-9",
         }[size]
       : "";
 
@@ -104,6 +104,14 @@ export const Toggle = React.forwardRef<HTMLButtonElement, ToggleProps>(
       "--toggle-bg-light": pressed ? colorLightHover : colorLightBg,
     } as React.CSSProperties;
 
+    const iconSizes = {
+      "2xs": "w-2.5 h-2.5 shrink-0",
+      xs: "w-3 h-3 shrink-0",
+      sm: "w-3.5 h-3.5 shrink-0",
+      md: "w-4 h-4 shrink-0",
+      lg: "w-5 h-5 shrink-0",
+    };
+
     return (
       <button
         ref={ref}
@@ -123,7 +131,7 @@ export const Toggle = React.forwardRef<HTMLButtonElement, ToggleProps>(
         style={customStyles}
         {...props}
       >
-        {Icon && <Icon className={size === "2xs" || size === "xs" ? "w-3 h-3" : "w-4 h-4"} />}
+        {Icon && <Icon className={iconSizes[size]} />}
         {children}
       </button>
     );

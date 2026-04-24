@@ -27,11 +27,6 @@ export default function ComponentsShowcase() {
       <div className="space-y-8">
         <div className="space-y-4">
           <p className="caption text-primary-500">BASSVerse Library</p>
-          <h1 className="display">Interactive System</h1>
-          <p className="body-lg text-neutral-500 max-w-2xl">
-            A high-precision modular component library built for the BASSVerse ecosystem, 
-            featuring adaptive scaling and industrial-grade interactivity.
-          </p>
         </div>
 
         {/* Floating Navigator */}

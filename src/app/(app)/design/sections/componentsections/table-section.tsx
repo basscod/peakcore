@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from "@/components/ui/table";
+import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell, DataTable } from "@/components/ui/table";
 import { Button } from "@/components/ui/button";
 import { Edit2 } from "lucide-react";
 
@@ -88,6 +88,82 @@ export function TableSection() {
               </Table>
             </div>
           ))}
+        </div>
+      </div>
+      {/* 3. DataTable (Pro System) */}
+      <div className="space-y-24">
+        <div className="space-y-4">
+          <h2 className="h2 uppercase tracking-tighter">Pro Data Management</h2>
+          <p className="body-sm text-neutral-400">Advanced table systems with integrated search, filter, and sort capabilities.</p>
+        </div>
+
+        {/* Variant: Industrial Primary */}
+        <div className="space-y-8">
+          <h3 className="h3 uppercase tracking-tighter border-l-4 border-primary-500 pl-4">Industrial Variant (Primary)</h3>
+          <DataTable
+            title="Terminal Network Protocols"
+            variant="industrial"
+            color="primary"
+            columns={[
+              { header: "Node ID", accessor: "id" },
+              { header: "Status", accessor: "status" },
+              { header: "Latency", accessor: "latency" },
+              { header: "Throughput", accessor: "throughput" },
+            ]}
+            data={[
+              { id: "NODE-A1", status: "Active", latency: "12ms", throughput: "1.2GB/s" },
+              { id: "NODE-B2", status: "Standby", latency: "45ms", throughput: "400MB/s" },
+              { id: "NODE-C3", status: "Active", latency: "8ms", throughput: "2.4GB/s" },
+              { id: "NODE-D4", status: "Error", latency: "999ms", throughput: "0MB/s" },
+              { id: "NODE-E5", status: "Active", latency: "15ms", throughput: "1.1GB/s" },
+            ]}
+          />
+        </div>
+
+        {/* Variant: Striped Accent */}
+        <div className="space-y-8">
+          <h3 className="h3 uppercase tracking-tighter border-l-4 border-accent-500 pl-4">Striped Variant (Accent)</h3>
+          <DataTable
+            title="Asset Deployment Registry"
+            variant="striped"
+            color="accent"
+            density="compact"
+            columns={[
+              { header: "Asset Name", accessor: "name" },
+              { header: "Type", accessor: "type" },
+              { header: "Deployment", accessor: "date" },
+              { header: "Owner", accessor: "owner" },
+            ]}
+            data={[
+              { name: "Orbital Uplink", type: "COMM", date: "2026-04-12", owner: "ADMIN" },
+              { name: "Fusion Core", type: "PWR", date: "2026-03-20", owner: "TECH-01" },
+              { name: "Cryo Storage", type: "LOG", date: "2026-04-01", owner: "ADMIN" },
+              { name: "Security Array", type: "SEC", date: "2026-04-15", owner: "SEC-LEAD" },
+              { name: "Hydroponics", type: "BIO", date: "2026-01-10", owner: "TECH-02" },
+            ]}
+          />
+        </div>
+
+        {/* Variant: Bordered Secondary */}
+        <div className="space-y-8">
+          <h3 className="h3 uppercase tracking-tighter border-l-4 border-secondary-500 pl-4">Bordered Variant (Secondary)</h3>
+          <DataTable
+            title="User Authorization Logs"
+            variant="bordered"
+            color="secondary"
+            columns={[
+              { header: "Timestamp", accessor: "time" },
+              { header: "Identity", accessor: "user" },
+              { header: "Access Level", accessor: "level" },
+              { header: "Action", accessor: "action" },
+            ]}
+            data={[
+              { time: "09:42:15", user: "j.doe", level: "04", action: "GATE_OPEN" },
+              { time: "10:05:32", user: "a.smith", level: "02", action: "FILE_READ" },
+              { time: "11:20:11", user: "system", level: "05", action: "SCRUB_SYNC" },
+              { time: "12:01:45", user: "m.ross", level: "01", action: "LOGIN_FAIL" },
+            ]}
+          />
         </div>
       </div>
     </div>

@@ -62,6 +62,26 @@ export function InputSection() {
           </div>
         </div>
       </div>
+
+      {/* 3. Precision Scaling */}
+      <div className="space-y-8">
+        <h3 className="h3 uppercase tracking-tighter border-l-4 border-primary-500 pl-4">Precision Scaling</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 items-end gap-12 p-8 radius-lg border border-neutral-100 bg-background/50">
+          {(["sm", "md", "lg"] as const).map((s) => (
+            <div key={s} className="flex flex-col gap-3">
+              <InputField 
+                size={s} 
+                variant="filled" 
+                color="primary" 
+                label={`SIZE ${s.toUpperCase()}`} 
+                placeholder="Data entry..." 
+                iconLeft={Search}
+              />
+              <p className="caption text-neutral-400 font-mono text-center">{s}</p>
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
