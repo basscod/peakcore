@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Barlow_Condensed, Jost, JetBrains_Mono } from "next/font/google";
 import "../styles/globals.css";
 import { ThemeProvider } from "../components/theme/theme-provider";
-import { ThemeToggle } from "../components/theme/theme-toggle";
+import { Navbar } from "../components/layout/navbar";
 
 const barlowCondensed = Barlow_Condensed({
   variable: "--font-barlow-condensed",
@@ -47,10 +47,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="fixed top-4 right-4 z-50">
-            <ThemeToggle />
-          </div>
-          {children}
+          <Navbar />
+          <main className="flex-1 pt-16">
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>

@@ -2,9 +2,7 @@
 
 import * as React from "react";
 
-type CardVariant = "solid" | "outline" | "callout" | "ghost";
-type CardSize = "sm" | "md" | "lg";
-type CardColor = "primary" | "secondary" | "accent" | "neutral";
+import { CardVariant, CardSize, BaseColor as CardColor } from "@/types/ui";
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   variant?: CardVariant;

@@ -12,17 +12,17 @@ export function ToggleSection() {
 
   return (
     <div className="space-y-24 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <div className="space-y-2 border-b border-neutral-100 pb-4">
+      <div className="space-y-2 border-b stroke-light border-neutral-100 pb-4">
         <h2 className="h1">Toggle Systems</h2>
         <p className="body-sm text-neutral-400">Segmented controls and binary switches for state management.</p>
       </div>
 
       {/* 1. ToggleFull (Segmented) All Colors */}
       <div className="space-y-12">
-        <h3 className="h3 uppercase tracking-tighter border-l-4 border-primary-500 pl-4">ToggleFull Matrix</h3>
+        <h3 className="h3 uppercase border-l-4 border-primary-500 pl-4">ToggleFull Matrix</h3>
         <div className="space-y-4">
           {colors.map((c) => (
-            <div key={c} className="grid grid-cols-[100px_1fr] items-center gap-8 p-4 radius-md border border-neutral-100/50 transition-colors">
+            <div key={c} className="grid grid-cols-[100px_1fr] items-center gap-8 p-4 radius-lg border stroke-light border-neutral-100/50 transition-colors">
               <p className="caption text-neutral-400 font-mono uppercase">{c}</p>
               <div className="flex flex-wrap items-center gap-6">
                 {variants.map((v) => (
@@ -48,10 +48,10 @@ export function ToggleSection() {
 
       {/* 2. Binary Toggle All Colors */}
       <div className="space-y-12">
-        <h3 className="h3 uppercase tracking-tighter border-l-4 border-primary-500 pl-4">Binary Toggle Matrix</h3>
+        <h3 className="h3 uppercase border-l-4 border-primary-500 pl-4">Binary Toggle Matrix</h3>
         <div className="space-y-4">
           {colors.map((c) => (
-            <div key={c} className="grid grid-cols-[100px_1fr] items-center gap-8 p-4 radius-md border border-neutral-100/50 transition-colors">
+            <div key={c} className="grid grid-cols-[100px_1fr] items-center gap-8 p-4 radius-lg border stroke-light border-neutral-100/50 transition-colors">
               <p className="caption text-neutral-400 font-mono uppercase">{c}</p>
               <div className="flex flex-wrap items-center gap-10">
                 {variants.map((v) => (
@@ -72,23 +72,23 @@ export function ToggleSection() {
 
       {/* 3. Precision Scaling */}
       <div className="space-y-8">
-        <h3 className="h3 uppercase tracking-tighter border-l-4 border-primary-500 pl-4">Precision Scaling</h3>
-        <div className="space-y-12 p-8 radius-lg border border-neutral-100 bg-background/50">
+        <h3 className="h3 uppercase border-l-4 border-primary-500 pl-4">Precision Scaling</h3>
+        <div className="space-y-12 p-8 radius-lg border stroke-light border-neutral-100 bg-background/50">
           <div className="flex flex-wrap items-end gap-10">
-            {["2xs", "xs", "sm", "md", "lg"].map((s) => (
+            {(["2xs", "xs", "sm", "md", "lg"] as const).map((s) => (
               <div key={s} className="flex flex-col items-center gap-3">
-                <Toggle variant="light" color="primary" pressed size={s as any} icon={Plus} />
+                <Toggle variant="light" color="primary" pressed size={s} icon={Plus} />
                 <p className="caption text-neutral-400 font-mono">{s}</p>
               </div>
             ))}
           </div>
           <div className="flex flex-wrap items-end gap-10">
-            {["2xs", "xs", "sm", "md", "lg"].map((s) => (
+            {(["2xs", "xs", "sm", "md", "lg"] as const).map((s) => (
               <div key={s} className="flex flex-col items-center gap-3">
                 <ToggleFull
                   variant="light"
                   color="secondary"
-                  size={s as any}
+                  size={s}
                   value="A"
                   onChange={() => {}}
                   options={[{ label: s.toUpperCase(), value: "A" }]}

@@ -10,7 +10,7 @@ export function CardSection() {
 
   return (
     <div className="space-y-24 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <div className="space-y-2 border-b border-neutral-100 dark:border-neutral-800 pb-4">
+      <div className="space-y-2 border-b stroke-light border-neutral-100 dark:border-neutral-800 pb-4">
         <h2 className="h1">Card System</h2>
         <p className="body-sm text-neutral-400">Structural containers with modular surfacing and industrial-grade interactivity.</p>
       </div>
@@ -19,7 +19,7 @@ export function CardSection() {
       <div className="space-y-16">
         {variants.map((v) => (
           <div key={v} className="space-y-8">
-            <h3 className="h3 uppercase tracking-tighter border-l-4 border-primary-500 pl-4">{v} Variant</h3>
+            <h3 className="h3 uppercase border-l-4 border-primary-500 pl-4">{v} Variant</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
               {colors.map((c) => (
                 <Card key={`${v}-${c}`} variant={v} color={c} size="md">
@@ -47,7 +47,7 @@ export function CardSection() {
 
       {/* 2. Size Scales */}
       <div className="space-y-12">
-        <h3 className="h3 uppercase tracking-tighter border-l-4 border-accent-500 pl-4">Size Ecosystem</h3>
+        <h3 className="h3 uppercase border-l-4 border-accent-500 pl-4">Size Ecosystem</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
           {sizes.map((s) => (
             <Card key={s} size={s} variant="outline" color="primary">

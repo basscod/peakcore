@@ -3,9 +3,7 @@
 import * as React from "react";
 import { LucideIcon } from "lucide-react";
 
-type ToggleFullVariant = "solid" | "outline" | "light" | "underline" | "ghost";
-type ToggleFullColor = "primary" | "secondary" | "accent" | "neutral";
-type ToggleFullSize = "2xs" | "xs" | "sm" | "md" | "lg";
+import { ButtonVariant as ToggleFullVariant, BaseColor as ToggleFullColor, BaseSize as ToggleFullSize } from "@/types/ui";
 
 interface NavOption {
   label: string;

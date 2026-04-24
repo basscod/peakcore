@@ -4,9 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import { LucideIcon, Loader2 } from "lucide-react";
 
-type ButtonVariant = "solid" | "outline" | "light" | "underline" | "ghost";
-type ButtonColor = "primary" | "secondary" | "accent" | "neutral";
-type ButtonSize = "2xs" | "xs" | "sm" | "md" | "lg";
+import { ButtonVariant, BaseColor as ButtonColor, BaseSize as ButtonSize } from "@/types/ui";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: ButtonVariant;

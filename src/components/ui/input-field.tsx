@@ -3,9 +3,9 @@
 import * as React from "react";
 import { LucideIcon } from "lucide-react";
 
+import { BaseColor as InputColor } from "@/types/ui";
 type InputSize = "sm" | "md" | "lg";
 type InputVariant = "standard" | "ghost" | "underline" | "filled";
-type InputColor = "primary" | "secondary" | "accent" | "neutral";
 type InputStatus = "default" | "error" | "success" | "warning";
 
 interface InputFieldProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "color" | "size"> {

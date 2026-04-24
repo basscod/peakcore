@@ -3,9 +3,7 @@
 import * as React from "react";
 import { LucideIcon } from "lucide-react";
 
-type ToggleVariant = "solid" | "outline" | "light" | "underline" | "ghost";
-type ToggleColor = "primary" | "secondary" | "accent" | "neutral";
-type ToggleSize = "2xs" | "xs" | "sm" | "md" | "lg";
+import { ButtonVariant as ToggleVariant, BaseColor as ToggleColor, BaseSize as ToggleSize } from "@/types/ui";
 
 interface ToggleProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   pressed?: boolean;

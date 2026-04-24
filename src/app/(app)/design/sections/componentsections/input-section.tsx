@@ -10,7 +10,7 @@ export function InputSection() {
 
   return (
     <div className="space-y-24 animate-in fade-in slide-in-from-bottom-4 duration-500">
-      <div className="space-y-2 border-b border-neutral-100 pb-4">
+      <div className="space-y-2 border-b stroke-light border-neutral-100 pb-4">
         <h2 className="h1">Input System</h2>
         <p className="body-sm text-neutral-400">High-precision data entry with semantic feedback and adaptive states.</p>
       </div>
@@ -19,7 +19,7 @@ export function InputSection() {
       <div className="space-y-16">
         {variants.map((v) => (
           <div key={v} className="space-y-8">
-            <h3 className="h3 uppercase tracking-tighter border-l-4 border-primary-500 pl-4">{v} Variant</h3>
+            <h3 className="h3 uppercase border-l-4 border-primary-500 pl-4">{v} Variant</h3>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {colors.map((c) => (
                 <InputField 
@@ -65,8 +65,8 @@ export function InputSection() {
 
       {/* 3. Precision Scaling */}
       <div className="space-y-8">
-        <h3 className="h3 uppercase tracking-tighter border-l-4 border-primary-500 pl-4">Precision Scaling</h3>
-        <div className="grid grid-cols-1 md:grid-cols-3 items-end gap-12 p-8 radius-lg border border-neutral-100 bg-background/50">
+        <h3 className="h3 uppercase border-l-4 border-primary-500 pl-4">Precision Scaling</h3>
+        <div className="grid grid-cols-1 md:grid-cols-3 items-end gap-12 p-8 radius-lg border stroke-light border-neutral-100 bg-background/50">
           {(["sm", "md", "lg"] as const).map((s) => (
             <div key={s} className="flex flex-col gap-3">
               <InputField 

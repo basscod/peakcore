@@ -36,61 +36,61 @@ export default function GlobalStyles() {
         <div className="space-y-2">
           <p className="caption">System Documentation</p>
           <h1 className="display">Typography</h1>
-          <p className="body-sm text-neutral-500">Hover over headings to see the primary underline transition.</p>
+          <p className="body-sm text-neutral-500">Hover over headings to see the smooth primary color transition.</p>
         </div>
         
         <div className="space-y-10">
           <div className="space-y-6 p-6 border stroke-light border-neutral-200 radius-lg">
-            <h2 className="h2 border-b border-neutral-100 pb-2 mb-4">Headings</h2>
+            <h2 className="h2 stroke-light border-b border-neutral-100 pb-2 mb-4">Headings</h2>
             <div className="space-y-6">
               <div className="space-y-1">
-                <p className="caption text-primary-600">.h1</p>
+                <p className="caption text-primary-500">.h1</p>
                 <h1 className="h1">The industrial revolution and its consequences</h1>
               </div>
               <div className="space-y-1">
-                <p className="caption text-primary-600">.h2</p>
+                <p className="caption text-primary-500">.h2</p>
                 <h2 className="h2">Automated intelligence systems</h2>
               </div>
               <div className="space-y-1">
-                <p className="caption text-primary-600">.h3</p>
+                <p className="caption text-primary-500">.h3</p>
                 <h3 className="h3">Strategic neural interfaces</h3>
               </div>
               <div className="space-y-1">
-                <p className="caption text-primary-600">.h4</p>
+                <p className="caption text-primary-500">.h4</p>
                 <h4 className="h4">Quantum encrypted protocols</h4>
               </div>
               <div className="space-y-1">
-                <p className="caption text-primary-600">.h5</p>
+                <p className="caption text-primary-500">.h5</p>
                 <h5 className="h5">Distributed ledger validation</h5>
               </div>
               <div className="space-y-1">
-                <p className="caption text-primary-600">.h6</p>
+                <p className="caption text-primary-500">.h6</p>
                 <h6 className="h6">Micro-modular architecture</h6>
               </div>
             </div>
           </div>
 
           <div className="space-y-6 p-6 border stroke-light border-neutral-200 radius-lg">
-            <h2 className="h2 border-b border-neutral-100 pb-2 mb-4">Body & Content</h2>
+            <h2 className="h2 stroke-light border-b border-neutral-100 pb-2 mb-4">Body & Content</h2>
             <div className="space-y-6">
               <div className="space-y-1">
-                <p className="caption text-secondary-600">.body-lg</p>
+                <p className="caption text-secondary-500">.body-lg</p>
                 <p className="body-lg">Large body text for introductory paragraphs and high-importance content where legibility is paramount.</p>
               </div>
               <div className="space-y-1">
-                <p className="caption text-secondary-600">.body</p>
+                <p className="caption text-secondary-500">.body</p>
                 <p className="body">Standard body text used for the majority of the interface content. It balances density with readability across all devices.</p>
               </div>
               <div className="space-y-1">
-                <p className="caption text-secondary-600">.body-sm</p>
+                <p className="caption text-secondary-500">.body-sm</p>
                 <p className="body-sm">Smaller body text for secondary information, sidebars, and dense data displays.</p>
               </div>
               <div className="space-y-1">
-                <p className="caption text-accent-600">.caption</p>
+                <p className="caption text-accent-500">.caption</p>
                 <p className="caption">Meta-information, labels, and micro-copy.</p>
               </div>
               <div className="space-y-1">
-                <p className="caption text-accent-600">.codes</p>
+                <p className="caption text-accent-500">.codes</p>
                 <p>Use <code className="codes">npm run dev</code> to start the neural link.</p>
               </div>
             </div>

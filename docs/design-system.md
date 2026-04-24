@@ -9,8 +9,8 @@
 ## Typography Semantics
 
 ### Headings (Barlow Condensed)
-*   `.display`: Ultra-large heading (6xl/8xl). Features wide tracking for industrial clarity. Changes color to `primary-500` on hover.
-*   `.h1` to `.h6`: Standard heading hierarchy. Features a **primary-colored underline transition** that expands from the left on hover.
+*   `.display`: Ultra-large heading (6xl/8xl). Features **tracking-widest** for industrial clarity. Changes color to `primary-500` on hover.
+*   `.h1` to `.h6`: Standard heading hierarchy. Features **tracking-widest** for industrial clarity and **smooth transition to primary-500** on hover.
 
 ### Body & Meta (Jost)
 *   `.body-lg`: Large body text (1.125rem/1.25rem).
@@ -58,6 +58,17 @@ Unlike the semantic scales above, status colors do **not** flip in dark mode. Th
 *   `.stroke-normal`: 2px (standard borders).
 *   `.stroke-bold`: 4px (heavy containers).
 *   `.stroke-black`: 8px (extreme industrial depth).
+
+---
+
+## Layout Rules
+
+### Full Bleed Architecture
+*   **Mandatory**: All pages MUST be designed with a full-bleed architecture. 
+*   Avoid `max-w-*` wrappers on main page containers. 
+*   Use consistent horizontal padding (`px-8` standard) instead of layout width restrictions.
+
+---
 
 ### Stroke Styles
 *   `.stroke-solid`: Standard solid line.
@@ -160,11 +171,14 @@ A robust data entry system with integrated labels, status feedback, and adaptive
 *Note: InputField icons scale with the size and maintain consistent alignment with the wide horizontal padding.*
 
 ### File Structure
-- `src/styles/globals.css`: Main entry point.
-- `src/styles/tokens/`: Raw variables (`colours.css`, `fonts.css`).
-- `src/styles/semantics/`: Utility classes (`typography.css`, `strokes.css`).
+- `src/styles/`: Theme tokens and semantic utilities.
+- `src/components/ui/`: Atomic UI components.
+  - `table/`: Modular table sub-components.
+- `src/types/ui.ts`: Centralized UI type definitions.
 
 ### Implementation Rules
 1.  **Never hardcode hex values.** Use `--color-{token}` or Tailwind utility classes.
 2.  **Avoid `dark:` variants** for colors. The tokens handle theme switching automatically.
 3.  **Reuse semantics.** Use `.h1` instead of `text-4xl font-bold` to ensure hover effects and font-family consistency.
+4.  **Use Centralized Types.** Import `BaseColor`, `BaseSize`, etc., from `@/types/ui` to ensure system-wide consistency.
+5.  **Modularize Complex Components.** If a component exceeds 300 lines, extract sub-components or logic into a sub-directory (e.g., `src/components/ui/table/`).
